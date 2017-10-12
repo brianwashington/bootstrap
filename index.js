@@ -1,3 +1,2 @@
-var s = require('./index.html');
-
-// console.log(s);
+require('./index.html');
+require('./styles.css');
