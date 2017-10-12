@@ -1,12 +1,44 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  padding-top: 80px;
+  /* padding-top: 80px; */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+header {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 100px 0;
+  min-height: 100%;
+  background: no-repeat center center;
+  background-attachment: scroll;
+  background-color: #222;
+  background-size: cover;
 }
 
 .navbar {
   padding: 30px 15px;
   -webkit-transition:  all 0.25s;
   transition: all 0.25s;
+}
+
+@media (max-width: 400px) {
+  header {
+    position: relative;
+  }
+
+  .navbar img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 70%;
+  }
 }
 
 #brand {
@@ -23,9 +55,24 @@ body {
   opacity: 0.9;
 }
 
-.navbar img {
-  width: 70%;
-  height: 70%;
+.fill-screen {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.content-filler {
+  min-height: 350px;
+}
+
+.fixed-attachement {
+  background-attachment: fixed;
+}
+
+@media(max-width: 1024px) {
+  .fixed-attachement {
+    background-attachment: scroll;
+  }
 }
 
 footer {

@@ -4,15 +4,18 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/jquery.fs.wallpaper.css">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./styles.css">
   <title>App</title>
 </head>
 
 <body>
-  <header>
+  <header id="video-wallpaper">
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark cbp-af-header">
-      <a href="#" id="brand"><img src="./images/site-logo-white.png"></a>
+      <a href="#" id="brand">
+        <img src="./images/site-logo-white-70pct.png">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +41,7 @@
     </nav>
   </header>
 
-  <div class="container-fluid ">
+  <!-- <div class="container-fluid ">
     <div class="row ">
 
       <section class="col-sm-9 col-lg-8 order-1 order-sm-2 order-lg-2 ">
@@ -144,7 +147,24 @@
         </a>
       </aside>
     </div>
+  </div> -->
+
+  <div class="container-fluid">
+
+    <div class="content-filler">
+    </div>
+    <div class="row">
+      <div class="fill-screen fixed-attachement" style="background-image: url(./images/elk.jpg);"></div>
+    </div>
+    <div class="content-filler">
+    </div>
+    <div class="row">
+      <div class="fill-screen fixed-attachement" style="background-image: url(./images/snowboarder.jpg);"></div>
+    </div>
+    <div class="content-filler">
+    </div>
   </div>
+
   <footer class="container-fluid">
     <h1>FOOTER</h1>
   </footer>
@@ -154,6 +174,19 @@
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="./js/classie.js"></script>
   <script src="./js/cbpAnimatedHeader.js"></script>
+  <script src="./js/jquery.fs.wallpaper.min.js"></script>
+  <script>
+    $(window).on('load resize', function () {
+      $('.fill-screen').css('height', window.innerHeight);
+    });
+
+    $("#video-wallpaper").wallpaper({
+      source: {
+        poster: "./images/bikes.png",
+        mp4: "./images/echo.mp4"
+      }
+    });
+  </script>
 </body>
 
 </html>
