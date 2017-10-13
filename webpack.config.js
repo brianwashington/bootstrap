@@ -22,7 +22,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /(\.html$|\.css$)/, loader: "raw-loader"}
+      {test: /(\.html$|\.css$|\.js$)/, loader: "raw-loader"}
     ]
   },
   plugins: [new HtmlWebpackPlugin({
